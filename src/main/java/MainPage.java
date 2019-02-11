@@ -35,8 +35,8 @@ public class MainPage {
         return new SearchPage(driver);
     }
 
-    public SearchPage search() {
-        fillSearch("Heroes");
+    public SearchPage search(String name) {
+        fillSearch(name);
         setSelector();
         clickSearchButton();
         return new SearchPage(driver);
@@ -44,7 +44,6 @@ public class MainPage {
 
     public String getLinkText(){
 
-        driver.findElement(navLink).getText();
         return driver.findElement(navLink).getText();
     }
 }
